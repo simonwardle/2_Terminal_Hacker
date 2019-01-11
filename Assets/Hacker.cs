@@ -7,7 +7,7 @@ public class Hacker : MonoBehaviour
     string[] levelOnePasswords = {"books", "shelf", "aisle", "membership", "fiction", "borrow"};
     string[] levelTwoPasswords = { "panda", "uniform", "arrest", "prisoner", "handcuffs", "truncheon"};
     string[] levelThreePasswords = { "starfield", "telescope", "environment", "exploration", "astronauts" };
-    string menuMessage = "Enter menu at any time.";
+    const string menuMessage = "Enter menu at any time.";
 
     //Game State
     int level;
@@ -18,7 +18,6 @@ public class Hacker : MonoBehaviour
         Win
     };
     Screen currentScreen = Screen.MainMenu;
-
     string password;
  
     
@@ -79,6 +78,7 @@ public class Hacker : MonoBehaviour
         {
             Terminal.WriteLine("Please choose a valid level.");
         }
+        Terminal.WriteLine(menuMessage);
     }
 
     void AskForPassword()
@@ -169,5 +169,6 @@ public class Hacker : MonoBehaviour
                 break;
 
         }
+        Terminal.WriteLine(menuMessage);
     }
 }
