@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditorInternal;
+using UnityEngine;
 
 public class Hacker : MonoBehaviour
 {
@@ -44,6 +45,11 @@ public class Hacker : MonoBehaviour
         if (input == "menu")
         {
             ShowMainMenu();
+        }
+        else if (input == "exit" || input == "close" || input == "quit")
+        {
+            Terminal.WriteLine("If running via the web just close the current tab to close.");
+            Application.Quit();
         }
         else if (currentScreen == Screen.MainMenu)
         {
